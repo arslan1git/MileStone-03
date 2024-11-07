@@ -1,0 +1,150 @@
+/* General reset and styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 25px 0;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header section */
+.header {
+  background-color: #2e3b55;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 150px;
+}
+.header h1 {
+  margin: 0;
+  font-size: 58px;
+}
+.header p {
+  color: #e74c3c;
+  margin: 5px 0 0;
+  font-size: 35px;
+}
+
+/* Profile and contact info section */
+.profile-section {
+  display: flex;
+  padding: 20px;
+  margin-left: 35px;
+}
+.profile-text {
+  width: 60%;
+}
+.profile-text h2 {
+  color: #e74c3c;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.profile-text p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+.profile-photo {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Education sections */
+#Institution1,
+#Institution2 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+#degree1,
+#degree2 {
+  margin-bottom: 6px;
+}
+
+
+/* Columns */
+.columns {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  margin-left: 35px;
+}
+
+.left-column {
+  width: 65%;
+}
+
+.right-column {
+  width: 35%;
+  line-height: 1.5;
+}
+
+/* Section Titles */
+
+.section1 {
+  height: 230px;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Section content styling */
+
+  .experience-date {
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .columns {
+    flex-direction: column;
+  }
+  .column {
+    width: 100%;
+  }
+
+  .right-column {
+    width: 100%;
+  }
+  .profile-section {
+    flex-direction: column;
+  }
+  .profile-text {
+    width: 100%;
+  }
+  .profile-photo {
+    width: 100%;
+  }
+}

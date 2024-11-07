@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Resume</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header Section -->
+      <header class="header">
+        <h1 id="resume-name"></h1>
+        <p id="job-title"></p>
+      </header>
+
+      <!-- Profile Section -->
+      <div class="profile-section">
+        <div class="profile-text">
+          <h2>PROFILE</h2>
+          <p id="resume-profile-description"></p>
+          <p id="resume-phone"></p>
+          <p id="resume-email"></p>
+        </div>
+        <div class="profile-photo">
+          <img
+            id="resume-photo"
+            src="https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg="
+            alt="Profile Photo"
+          />
+        </div>
+      </div>
+
+      <!-- Columns for Education, Experience, Certification, Skills -->
+      <div class="columns">
+        <!-- Left Column -->
+        <div class="left-column">
+          <div class="column">
+            <div class="section1">
+              <h3 class="section-title">EDUCATION</h3>
+              <div id="Institution1">
+                <!-- Education items will be dynamically populated here -->
+              </div>
+              <div id="degree1">
+                <!-- Education items will be dynamically populated here -->
+              </div>
+              <br />
+              <div id="Institution2">
+                <!-- Education items will be dynamically populated here -->
+              </div>
+              <div id="degree2">
+                <!-- Education items will be dynamically populated here -->
+              </div>
+            </div>
+
+            <div class="section">
+              <h3 class="section-title">CERTIFICATION</h3>
+              <ul>
+                <li id="certification1"></li>
+                <li id="certification2"></li>
+                <li id="certification3"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+          <div class="column">
+            <div class="section1">
+              <h3 class="section-title">EXPERIENCE</h3>
+              <div class="experience-date" id="experience-date1">
+                <!-- Experience items will be dynamically populated here -->
+              </div>
+              <div class="experience-content" id="company1">
+                <!-- Experience items will be dynamically populated here -->
+              </div>
+              <div class="experience-content" id="position1">
+                <!-- Experience items will be dynamically populated here -->
+              </div>
+              <br>
+              <div class="experience-date" id="experience-date2">
+                <!-- Experience items will be dynamically populated here -->
+              </div>
+              <div class="experience-content" id="company2">
+                <!-- Experience items will be dynamically populated here -->
+              </div>
+              <div class="experience-content" id="position2">
+                <!-- Experience items will be dynamically populated here -->
+              </div>
+            </div>
+
+            <div class="section">
+              <h3 class="section-title">SKILLS</h3>
+              <div id="resume-skills">
+                <!-- Skills will be dynamically populated here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="resumeScript.js"></script>
+  </body>
+</html>
