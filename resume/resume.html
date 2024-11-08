@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <main class="container">
       <!-- Header Section -->
       <header class="header">
         <h1 id="resume-name"></h1>
@@ -15,7 +15,7 @@
       </header>
 
       <!-- Profile Section -->
-      <div class="profile-section">
+      <section class="profile-section">
         <div class="profile-text">
           <h2>PROFILE</h2>
           <p id="resume-profile-description"></p>
@@ -29,46 +29,44 @@
             alt="Profile Photo"
           />
         </div>
-      </div>
+      </section>
 
       <!-- Columns for Education, Experience, Certification, Skills -->
       <div class="columns">
         <!-- Left Column -->
-        <div class="left-column">
-          <div class="column">
-            <div class="section1">
-              <h3 class="section-title">EDUCATION</h3>
-              <div id="Institution1">
-                <!-- Education items will be dynamically populated here -->
-              </div>
-              <div id="degree1">
-                <!-- Education items will be dynamically populated here -->
-              </div>
-              <br />
-              <div id="Institution2">
-                <!-- Education items will be dynamically populated here -->
-              </div>
-              <div id="degree2">
-                <!-- Education items will be dynamically populated here -->
-              </div>
+        <section class="left-column">
+          <section class="education-section">
+            <h3 class="section-title">EDUCATION</h3>
+            <div class="education-content" id="Institution1">
+              <!-- Education items will be dynamically populated here -->
             </div>
+            <div class="degree" id="degree1">
+              <!-- Education items will be dynamically populated here -->
+            </div>
+            <br />
+            <div class="education-content" id="Institution2">
+              <!-- Education items will be dynamically populated here -->
+            </div>
+            <div class="degree" id="degree2">
+              <!-- Education items will be dynamically populated here -->
+            </div>
+          </section>
 
-            <div class="section">
-              <h3 class="section-title">CERTIFICATION</h3>
-              <ul>
-                <li id="certification1"></li>
-                <li id="certification2"></li>
-                <li id="certification3"></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+          <section class="certifications-section">
+            <h3 class="section-title">CERTIFICATION</h3>
+            <ul>
+              <li id="certification1"></li>
+              <li id="certification2"></li>
+              <li id="certification3"></li>
+            </ul>
+          </section>
+        </section>
 
         <!-- Right Column -->
-        <div class="right-column">
-          <div class="column">
-            <div class="section1">
-              <h3 class="section-title">EXPERIENCE</h3>
+        <section class="right-column">
+          <section class="experience-section">
+            <h3 class="section-title">EXPERIENCE</h3>
+            <article class="job-entry">
               <div class="experience-date" id="experience-date1">
                 <!-- Experience items will be dynamically populated here -->
               </div>
@@ -78,7 +76,9 @@
               <div class="experience-content" id="position1">
                 <!-- Experience items will be dynamically populated here -->
               </div>
-              <br>
+              <br />
+            </article>
+            <article class="job-entry">
               <div class="experience-date" id="experience-date2">
                 <!-- Experience items will be dynamically populated here -->
               </div>
@@ -88,19 +88,18 @@
               <div class="experience-content" id="position2">
                 <!-- Experience items will be dynamically populated here -->
               </div>
-            </div>
+            </article>
+          </section>
 
-            <div class="section">
-              <h3 class="section-title">SKILLS</h3>
-              <div id="resume-skills">
-                <!-- Skills will be dynamically populated here -->
-              </div>
+          <section class="skills-section">
+            <h3 class="section-title">SKILLS</h3>
+            <div id="resume-skills">
+              <!-- Skills will be dynamically populated here -->
             </div>
-          </div>
-        </div>
+          </section>
+        </section>
       </div>
-    </div>
-
-    <script src="resumeScript.js"></script>
+    </main>
   </body>
+  <script src="resumeScript.js"></script>
 </html>

@@ -10,8 +10,6 @@ body {
   margin: 20px auto;
   padding: 25px 0;
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
@@ -41,6 +39,7 @@ body {
   display: flex;
   padding: 20px;
   margin-left: 35px;
+  min-height: 250px;
 }
 .profile-text {
   width: 60%;
@@ -69,18 +68,13 @@ body {
 }
 
 /* Education sections */
-#Institution1,
-#Institution2 {
+.education-content {
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 10px;  
   text-transform: uppercase;
 }
 
-#degree1,
-#degree2 {
-  margin-bottom: 6px;
-}
 
 
 /* Columns */
@@ -101,30 +95,30 @@ body {
 }
 
 /* Section Titles */
-
-.section1 {
-  height: 230px;
-}
-
 .section-title {
   font-size: 20px;
   color: #e74c3c;
   font-weight: bold;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 /* Section content styling */
 
-  .experience-date {
+.education-section, .experience-section{
+  height: 220px;
+}
+
+.experience-date {
   font-weight: bold;
 }
 
 ul {
   list-style-type: disc;
-  padding-left: 20px;
+  list-style-type: none; /* Removes bullets */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Optional: Removes default margin */
   line-height: 1.6;
 }
-
 
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {

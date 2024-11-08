@@ -15,7 +15,7 @@
         <div class="section-title">Profile</div>
         <div class="form-group">
           <label for="name">Full Name</label>
-          <input type="text" id="name" />
+          <input type="text" id="name" required />
         </div>
         <div class="form-group">
           <label for="job-title">Job-title</label>
@@ -23,19 +23,19 @@
         </div>
         <div class="form-group">
           <label for="profile-photo">Profile Photo</label>
-          <input type="file" id="profile-photo" accept="image/*" />
+          <input type="file" id="profile-photo" required accept="image/*" />
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" />
+          <input type="email" id="email" required />
         </div>
         <div class="form-group">
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" />
+          <input type="tel" id="phone" required />
         </div>
         <div class="form-group">
           <label for="profile">Profile Summary</label>
-          <textarea id="profile" rows="3"></textarea>
+          <textarea id="profile" rows="4"></textarea>
         </div>
 
         <!-- Education Section -->
@@ -64,11 +64,11 @@
           <input type="text" id="experience-dates1" />
         </div>
         <div class="form-group">
-          <label for="experience1">Company</label>
+          <label for="company1">Company</label>
           <input type="text" id="company1" />
         </div>
         <div class="form-group">
-          <label for="experience1">Position</label>
+          <label for="position1">Position</label>
           <input type="text" id="position1" />
         </div>
         <div class="form-group">
@@ -76,26 +76,26 @@
           <input type="text" id="experience-dates2" />
         </div>
         <div class="form-group">
-          <label for="experience2">Company</label>
+          <label for="company2">Company</label>
           <input type="text" id="company2" />
         </div>
         <div class="form-group">
-          <label for="experience1">Position</label>
+          <label for="position2">Position</label>
           <input type="text" id="position2" />
         </div>
 
         <!-- Certification Section -->
         <div class="section-title">Certification</div>
         <div class="form-group">
-          <label for="certification1">Certification</label>
+          <label for="certification1">Certification 1</label>
           <input type="text" id="certification1" />
         </div>
         <div class="form-group">
-          <label for="certification2">Certification</label>
+          <label for="certification2">Certification 2</label>
           <input type="text" id="certification2" />
         </div>
         <div class="form-group">
-          <label for="certification3">Certification</label>
+          <label for="certification3">Certification 3</label>
           <input type="text" id="certification3" />
         </div>
 
@@ -105,9 +105,10 @@
           <label for="skills">Skills</label>
           <textarea id="skills" rows="3"></textarea>
         </div>
-
         <!-- Submit Button -->
-        <button class="btn-submit" id="submit-btn" type="submit" value="">Submit</button>
+        <button class="btn-submit" id="submit-btn" type="submit" value="">
+          Submit
+        </button>
       </div>
     </form>
   </body>
