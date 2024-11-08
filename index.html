@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESUME FORM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="form">
+      <div class="container" id="container">
+        <h1>RESUME FORM</h1>
+
+        <!-- Profile Section -->
+        <fieldset>
+          <legend class="section-title">Profile</legend>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="full_name" placeholder="Enter your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="job-title">Job Title</label>
+            <input type="text" id="job-title" name="job_title" placeholder="Your job title" />
+          </div>
+          <div class="form-group">
+            <label for="profile-photo">Profile Photo</label>
+            <input type="file" id="profile-photo" name="profile_photo" accept="image/*" aria-label="Upload profile photo" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required />
+          </div>
+          <div class="form-group">
+            <label for="profile">Profile Summary</label>
+            <textarea id="profile" name="profile_summary" rows="3" placeholder="Briefly describe yourself"></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Education Section -->
+        <fieldset>
+          <legend class="section-title">Education</legend>
+          <div class="form-group">
+            <label for="Institution1">Institution</label>
+            <input type="text" id="Institution1" name="institution1" placeholder="First institution name" />
+          </div>
+          <div class="form-group">
+            <label for="degree1">Degree</label>
+            <input type="text" id="degree1" name="degree1" placeholder="First degree obtained" />
+          </div>
+          <div class="form-group">
+            <label for="Institution2">Institution</label>
+            <input type="text" id="Institution2" name="institution2" placeholder="Second institution name" />
+          </div>
+          <div class="form-group">
+            <label for="degree2">Degree</label>
+            <input type="text" id="degree2" name="degree2" placeholder="Second degree obtained" />
+          </div>
+        </fieldset>
+
+        <!-- Experience Section -->
+        <fieldset>
+          <legend class="section-title">Experience</legend>
+          <div class="form-group">
+            <label for="experience-dates1">Dates</label>
+            <input type="text" id="experience-dates1" placeholder="Start date - End date" name="experience_dates1" />
+          </div>
+          <div class="form-group">
+            <label for="company1">Company</label>
+            <input type="text" id="company1" name="company1" placeholder="First company name" />
+          </div>
+          <div class="form-group">
+            <label for="position1">Position</label>
+            <input type="text" id="position1" name="position1" placeholder="First position held" />
+          </div>
+          <div class="form-group">
+            <label for="experience-dates2">Dates</label>
+            <input type="text" id="experience-dates2" placeholder="Start date - End date" name="experience_dates2" />
+          </div>
+          <div class="form-group">
+            <label for="company2">Company</label>
+            <input type="text" id="company2" name="company2" placeholder="Second company name" />
+          </div>
+          <div class="form-group">
+            <label for="position2">Position</label>
+            <input type="text" id="position2" name="position2" placeholder="Second position held" />
+          </div>
+        </fieldset>
+
+        <!-- Certification Section -->
+        <fieldset>
+          <legend class="section-title">Certification</legend>
+          <div class="form-group">
+            <label for="certification1">Certification 1</label>
+            <input type="text" id="certification1" name="certification1" placeholder="First certification" />
+          </div>
+          <div class="form-group">
+            <label for="certification2">Certification 2</label>
+            <input type="text" id="certification2" name="certification2" placeholder="Second certification" />
+          </div>
+          <div class="form-group">
+            <label for="certification3">Certification 3</label>
+            <input type="text" id="certification3" name="certification3" placeholder="Third certification" />
+          </div>
+        </fieldset>
+
+        <!-- Skills Section -->
+        <fieldset>
+          <legend class="section-title">Skills</legend>
+          <div class="form-group">
+            <label for="skill1">Skill 1</label>
+            <input type="text" id="skill1" name="skill1" placeholder="First skill" />
+          </div>
+          <div class="form-group">
+            <label for="skill2">Skill 2</label>
+            <input type="text" id="skill2" name="skill2" placeholder="Second skill" />
+          </div>
+          <div class="form-group">
+            <label for="skill3">Skill 3</label>
+            <input type="text" id="skill3" name="skill3" placeholder="Third skill" />
+          </div>
+          <div class="form-group">
+            <label for="skill4">Skill 4</label>
+            <input type="text" id="skill4" name="skill4" placeholder="Fourth skill" />
+          </div>
+        </fieldset>
+
+        <!-- Submit Button -->
+        <button class="btn-submit" id="submit-btn" type="submit" value="Submit">
+          Submit
+        </button>
+      </div>
+    </form>
+  </body>
+  <script src="script.js"></script>
+</html>

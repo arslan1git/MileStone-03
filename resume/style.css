@@ -1,6 +1,6 @@
 /* General reset and styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: Pt Sans, sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f2f2f2;
@@ -25,10 +25,13 @@ body {
   height: 150px;
 }
 .header h1 {
+  font-family: playfair display, serif;
   margin: 0;
-  font-size: 58px;
+  font-size: 68px;
 }
 .header p {
+  font-family: playfair display, serif;
+
   color: #e74c3c;
   margin: 5px 0 0;
   font-size: 35px;
@@ -44,27 +47,40 @@ body {
 .profile-text {
   width: 60%;
 }
-.profile-text h2 {
-  color: #e74c3c;
-  font-size: 20px;
-  margin-bottom: 10px;
-}
+
 .profile-text p {
   font-size: 15px;
   line-height: 1.6;
-  color: #333;
 }
 .profile-photo {
-  width: 40%;
+  width: 45%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .profile-photo img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  border-radius: 5%;
+  box-shadow: 13px 14px 16px rgba(0, 0, 0, 0.295);
   object-fit: cover;
+  
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+}
+
+i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.info{
+  font-weight:700;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 /* Education sections */
@@ -96,10 +112,11 @@ body {
 
 /* Section Titles */
 .section-title {
+  font-family: roboto slab, sans-serif;
   font-size: 20px;
   color: #e74c3c;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* Section content styling */

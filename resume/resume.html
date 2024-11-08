@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dynamic Resume</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -17,15 +24,22 @@
       <!-- Profile Section -->
       <section class="profile-section">
         <div class="profile-text">
-          <h2>PROFILE</h2>
+          <h3 class="section-title">PROFILE</h3>
           <p id="resume-profile-description"></p>
-          <p id="resume-phone"></p>
-          <p id="resume-email"></p>
+          <div class="contact-info">
+            <i class="fa-solid fa-phone" style="color: #e74c3c"></i>
+            <p class="info" id="resume-phone"></p>
+          </div>
+          <div class="contact-info">
+            <i class="fa-solid fa-envelope" style="color: #e74c3c"></i>
+
+            <p class="info" id="resume-email"></p>
+          </div>
         </div>
         <div class="profile-photo">
           <img
             id="resume-photo"
-            src="https://media.istockphoto.com/id/1327592506/vector/default-avatar-photo-placeholder-icon-grey-profile-picture-business-man.jpg?s=612x612&w=0&k=20&c=BpR0FVaEa5F24GIw7K8nMWiiGmbb8qmhfkpXcp1dhQg="
+            src=""
             alt="Profile Photo"
           />
         </div>
@@ -93,9 +107,13 @@
 
           <section class="skills-section">
             <h3 class="section-title">SKILLS</h3>
-            <div id="resume-skills">
+            <ul>
+              <li id="resume-skill1"></li>
+              <li id="resume-skill2"></li>
+              <li id="resume-skill3"></li>
+              <li id="resume-skill4"></li>
               <!-- Skills will be dynamically populated here -->
-            </div>
+            </ul>
           </section>
         </section>
       </div>

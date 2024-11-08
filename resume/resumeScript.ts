@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   let name = localStorage.getItem("name");
   let surname = localStorage.getItem("job-title");
-  let profilePhoto = localStorage.getItem("profilePhoto");
+  let profilePhoto:any = localStorage.getItem("profilePhoto");
   let email = localStorage.getItem("email");
   let phone = localStorage.getItem("phone");
   let profileSummary = localStorage.getItem("profileSummary");
@@ -18,7 +18,10 @@ window.addEventListener("load", () => {
   let certification1 = localStorage.getItem("certification1");
   let certification2 = localStorage.getItem("certification2");
   let certification3 = localStorage.getItem("certification3");
-  let skills = localStorage.getItem("skills");
+  let skill1 = localStorage.getItem("skill1");
+  let skill2 = localStorage.getItem("skill2");
+  let skill3 = localStorage.getItem("skill3");
+  let skill4 = localStorage.getItem("skill4");
 
   let resumeName = document.getElementById("resume-name") as HTMLInputElement;
   resumeName.textContent = name;
@@ -38,7 +41,8 @@ window.addEventListener("load", () => {
   resumeEmail.textContent = email;
 
   let profilePic = document.getElementById("resume-photo") as HTMLInputElement;
-  profilePic.textContent = profilePhoto;
+  profilePic.src = profilePhoto;
+  
 
   let education1 = document.getElementById("Institution1") as HTMLInputElement;
   education1.textContent = Institution1;
@@ -89,6 +93,12 @@ window.addEventListener("load", () => {
   ) as HTMLInputElement;
   certification03.textContent = certification3;
 
-  let skills01 = document.getElementById("resume-skills") as HTMLInputElement;
-  skills01.textContent = skills;
+  let skill01 = document.getElementById("resume-skill1") as HTMLInputElement;
+  skill01.textContent = skill1;
+  let skill02 = document.getElementById("resume-skill2") as HTMLInputElement;
+  skill02.textContent = skill2;
+  let skill03 = document.getElementById("resume-skill3") as HTMLInputElement;
+  skill03.textContent = skill3;
+  let skill04 = document.getElementById("resume-skill4") as HTMLInputElement;
+  skill04.textContent = skill4;
 });

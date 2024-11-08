@@ -23,14 +23,16 @@ const certification1Input = document.getElementById("certification1");
 const certification2Input = document.getElementById("certification2");
 const certification3Input = document.getElementById("certification3");
 // Skills Section
-const skillsInput = document.getElementById("skills");
-let form = document.getElementById("form");
-let submitBtn = document.getElementById("submit-btn");
-form?.addEventListener("submit", (event) => {
+const skills1Input = document.getElementById("skill1");
+const skills2Input = document.getElementById("skill2");
+const skills3Input = document.getElementById("skill3");
+const skills4Input = document.getElementById("skill4");
+const form = document.getElementById("form");
+form.addEventListener("submit", (event) => {
     event.preventDefault();
+    // Store each input in localStorage
     localStorage.setItem("name", nameInput.value);
     localStorage.setItem("job-title", jobInput.value);
-    localStorage.setItem("profilePhoto", profilePhotoInput.value);
     localStorage.setItem("email", emailInput.value);
     localStorage.setItem("phone", phoneInput.value);
     localStorage.setItem("profileSummary", profileSummary.value);
@@ -40,14 +42,25 @@ form?.addEventListener("submit", (event) => {
     localStorage.setItem("degree2", degree2Input.value);
     localStorage.setItem("company1", company1Input.value);
     localStorage.setItem("position1", position1Input.value);
+    localStorage.setItem("company2", company2Input.value);
     localStorage.setItem("position2", position2Input.value);
-    localStorage.setItem("company2", company2Input.value);
     localStorage.setItem("experienceDates1", experienceDates1Input.value);
-    localStorage.setItem("company2", company2Input.value);
     localStorage.setItem("experienceDates2", experienceDates2Input.value);
     localStorage.setItem("certification1", certification1Input.value);
     localStorage.setItem("certification2", certification2Input.value);
     localStorage.setItem("certification3", certification3Input.value);
-    localStorage.setItem("skills", skillsInput.value);
+    localStorage.setItem("skill1", skills1Input.value);
+    localStorage.setItem("skill2", skills2Input.value);
+    localStorage.setItem("skill3", skills3Input.value);
+    localStorage.setItem("skill4", skills4Input.value);
+    if (profilePhotoInput.files && profilePhotoInput.files[0]) {
+        let reader = new FileReader();
+        reader.addEventListener("load", () => {
+            let textImg = reader.result;
+            localStorage.setItem("profilePhoto", textImg);
+        });
+        reader.readAsDataURL(profilePhotoInput.files[0]);
+    }
+    // Redirect to resume page
     window.location.href = "./resume/resume.html";
 });
