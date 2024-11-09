@@ -1,6 +1,6 @@
 "use strict";
+let myName = localStorage.getItem("name");
 window.addEventListener("load", () => {
-    let name = localStorage.getItem("name");
     let surname = localStorage.getItem("job-title");
     let profilePhoto = localStorage.getItem("profilePhoto");
     let email = localStorage.getItem("email");
@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
     let skill3 = localStorage.getItem("skill3");
     let skill4 = localStorage.getItem("skill4");
     let resumeName = document.getElementById("resume-name");
-    resumeName.textContent = name;
+    resumeName.textContent = myName;
     let surName = document.getElementById("job-title");
     surName.textContent = surname;
     let description = document.getElementById("resume-profile-description");
@@ -70,6 +70,7 @@ window.addEventListener("load", () => {
     let skill04 = document.getElementById("resume-skill4");
     skill04.textContent = skill4;
 });
+// hide and show sections
 let skill_section = document.getElementById("skills-section");
 let skillsBtn = document.getElementById("skillsBtn");
 skillsBtn?.addEventListener("click", () => {
@@ -90,6 +91,7 @@ let educationBtn = document.getElementById("educationBtn");
 educationBtn?.addEventListener("click", () => {
     education_section.classList.toggle("hide");
 });
+// print share and edit buttons
 let printBtn = document.getElementById("print-btn");
 printBtn.addEventListener("click", () => {
     window.print();
@@ -97,4 +99,23 @@ printBtn.addEventListener("click", () => {
 let editBtn = document.getElementById("edit-btn");
 editBtn.addEventListener("click", () => {
     window.history.back();
+});
+let shareBtn = document.getElementById("share-btn");
+let anchor = document.getElementById("anchor");
+let username;
+if (myName) {
+    username = myName.toLowerCase().replace(/\s+/g, "-");
+}
+else {
+    username = "user";
+}
+let resumeUrl = "http://127.0.0.1:5500/resume/resume.html";
+let uniqueUrl = `${resumeUrl}?/${username}`;
+shareBtn.addEventListener("click", () => {
+    anchor.setAttribute("href", uniqueUrl);
+});
+shareBtn.addEventListener("click", () => {
+    navigator.clipboard.writeText(uniqueUrl).then(() => {
+        alert("URL copied to clipboard");
+    });
 });

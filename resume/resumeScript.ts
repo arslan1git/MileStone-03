@@ -1,5 +1,6 @@
+
+let myName = localStorage.getItem("name");
 window.addEventListener("load", () => {
-  let name = localStorage.getItem("name");
   let surname = localStorage.getItem("job-title");
   let profilePhoto: any = localStorage.getItem("profilePhoto");
   let email = localStorage.getItem("email");
@@ -24,7 +25,7 @@ window.addEventListener("load", () => {
   let skill4 = localStorage.getItem("skill4");
 
   let resumeName = document.getElementById("resume-name") as HTMLInputElement;
-  resumeName.textContent = name;
+  resumeName.textContent = myName;
 
   let surName = document.getElementById("job-title") as HTMLInputElement;
   surName.textContent = surname;
@@ -102,9 +103,10 @@ window.addEventListener("load", () => {
   skill04.textContent = skill4;
 });
 
+// hide and show sections
+
 let skill_section = document.getElementById("skills-section");
 let skillsBtn = document.getElementById("skillsBtn");
-
 skillsBtn?.addEventListener("click", () => {
   skill_section!.classList.toggle("hide");
 });
@@ -127,6 +129,8 @@ educationBtn?.addEventListener("click", () => {
   education_section!.classList.toggle("hide");
 });
 
+
+// print share and edit buttons
 let printBtn = document.getElementById("print-btn") as HTMLInputElement;
 printBtn.addEventListener("click", () => {
   window.print();
@@ -136,3 +140,24 @@ let editBtn = document.getElementById("edit-btn") as HTMLInputElement;
 editBtn.addEventListener("click", () => {
   window.history.back();
 });
+
+let shareBtn = document.getElementById("share-btn") as HTMLInputElement;
+let anchor = document.getElementById("anchor") as HTMLAnchorElement;
+let username;
+if(myName){
+  username = myName.toLowerCase().replace(/\s+/g, "-");
+}else {
+  username = "user";}
+
+  let resumeUrl = "http://127.0.0.1:5500/resume/resume.html"
+  let uniqueUrl = `${resumeUrl}?/${username}`
+
+shareBtn.addEventListener("click", () => {
+  anchor.setAttribute("href", uniqueUrl)
+});
+
+shareBtn.addEventListener("click", () => {
+  navigator.clipboard.writeText(uniqueUrl).then(() => {
+    alert("URL copied to clipboard"); 
+  })
+})

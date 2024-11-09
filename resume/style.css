@@ -141,6 +141,9 @@ ul {
   justify-content: center;
   padding: 10px 0;
 }
+.btnDiv a {
+  text-decoration: none;
+}
 
 .btn {
   padding: 10px 20px;
