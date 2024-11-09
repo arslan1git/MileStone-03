@@ -53,7 +53,7 @@ body {
   line-height: 1.6;
 }
 .profile-photo {
-  width: 45%;
+  width: 40%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -120,7 +120,7 @@ i {
 
 .education-section,
 .experience-section {
-  height: 220px;
+  min-height: 220px;
 }
 
 .experience-date {
@@ -176,23 +176,50 @@ ul {
 
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {
-  .columns {
-    flex-direction: column;
+  /* Adjust header */
+  .header h1 {
+    font-size: 48px;
   }
-  .column {
+  .header p {
+    font-size: 28px;
+  }
+  
+  /* Stack profile section vertically */
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    text-align: center;
+  }
+  .profile-text,
+  .profile-photo {
     width: 100%;
   }
-
+  
+  /* Adjust image size */
+  .profile-photo img {
+    width: 180px;
+    height: 180px;
+  }
+  
+  /* Stack columns vertically */
+  .columns {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  .left-column,
   .right-column {
     width: 100%;
   }
-  .profile-section {
-    flex-direction: column;
+
+  /* Adjust font sizes */
+  .education-content, .info {
+    font-size: 16px;
   }
-  .profile-text {
-    width: 100%;
-  }
-  .profile-photo {
-    width: 100%;
+
+  /* Resize buttons */
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
   }
 }
