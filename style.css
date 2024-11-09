@@ -118,19 +118,20 @@ fieldset {
     width: 99%;
   }
   form {
-    width: 90%; /* Increase form width to occupy more space on small screens */
+    width: 90%; 
   }
 
   h1 {
-    font-size: 28px; /* Reduce header size for smaller screens */
+    font-size: 28px; 
   }
 
   .container {
-    padding: 15px; /* Slightly reduce padding */
+    padding: 15px;
   }
 
   .form-group {
-    margin-bottom: 12px; /* Reduced margin for a compact layout */
+    margin-bottom: 12px; 
+    margin-right: 5px;
   }
 
   input[type="text"],
@@ -138,15 +139,15 @@ fieldset {
   input[type="tel"],
   input[type="file"],
   textarea {
-    padding: 10px; /* Slightly bigger padding for easier tapping */
+    padding: 10px; 
   }
 
   .btn-submit {
-    font-size: 14px; /* Smaller font size for the submit button */
-    padding: 12px; /* Adjust padding */
+    font-size: 14px; 
+    padding: 12px; 
   }
 
   .section-title {
-    font-size: 16px; /* Smaller section title font */
+    font-size: 16px; 
   }
 }
