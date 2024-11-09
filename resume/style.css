@@ -3,19 +3,18 @@ body {
   font-family: Pt Sans, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
+  background: linear-gradient(135deg, #2d3e50, #4c5c68, #343a40, #1e1e1e);
 }
 .container {
   max-width: 800px;
   margin: 20px auto;
-  padding: 25px 0;
   background-color: white;
   overflow: hidden;
 }
 
 /* Header section */
 .header {
-  background-color: #2e3b55;
+  background-color: #425274;
   color: white;
   display: flex;
   flex-direction: column;
@@ -35,6 +34,7 @@ body {
   color: #e74c3c;
   margin: 5px 0 0;
   font-size: 35px;
+  font-weight: 700;
 }
 
 /* Profile and contact info section */
@@ -64,7 +64,6 @@ body {
   border-radius: 5%;
   box-shadow: 13px 14px 16px rgba(0, 0, 0, 0.295);
   object-fit: cover;
-  
 }
 
 .contact-info {
@@ -73,13 +72,13 @@ body {
 }
 
 i {
-  margin-right: 10px;
-  font-size: 20px;
+  margin-right: 15px;
+  font-size: 22px;
 }
 
-.info{
-  font-weight:700;
-  font-size: 16px;
+.info {
+  font-weight: 700;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 
@@ -87,11 +86,9 @@ i {
 .education-content {
   font-weight: 600;
   font-size: 16px;
-  margin-bottom: 10px;  
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
-
-
 
 /* Columns */
 .columns {
@@ -121,7 +118,8 @@ i {
 
 /* Section content styling */
 
-.education-section, .experience-section{
+.education-section,
+.experience-section {
   height: 220px;
 }
 
@@ -135,6 +133,45 @@ ul {
   padding: 0; /* Removes default padding */
   margin: 0; /* Optional: Removes default margin */
   line-height: 1.6;
+}
+
+/* botton styling */
+.btnDiv {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  background-color: #2c4474;
+}
+
+.hide {
+  display: none;
+}
+
+@media print {
+  .btnDiv {
+    display: none;
+  }
+  .body {
+    visibility: hidden;
+  }
+  .container {
+    position: absolute;
+  }
 }
 
 /* Media queries for responsive design */

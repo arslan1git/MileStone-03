@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   let name = localStorage.getItem("name");
   let surname = localStorage.getItem("job-title");
-  let profilePhoto:any = localStorage.getItem("profilePhoto");
+  let profilePhoto: any = localStorage.getItem("profilePhoto");
   let email = localStorage.getItem("email");
   let phone = localStorage.getItem("phone");
   let profileSummary = localStorage.getItem("profileSummary");
@@ -42,7 +42,6 @@ window.addEventListener("load", () => {
 
   let profilePic = document.getElementById("resume-photo") as HTMLInputElement;
   profilePic.src = profilePhoto;
-  
 
   let education1 = document.getElementById("Institution1") as HTMLInputElement;
   education1.textContent = Institution1;
@@ -101,4 +100,39 @@ window.addEventListener("load", () => {
   skill03.textContent = skill3;
   let skill04 = document.getElementById("resume-skill4") as HTMLInputElement;
   skill04.textContent = skill4;
+});
+
+let skill_section = document.getElementById("skills-section");
+let skillsBtn = document.getElementById("skillsBtn");
+
+skillsBtn?.addEventListener("click", () => {
+  skill_section!.classList.toggle("hide");
+});
+
+let experience_section = document.getElementById("experience-section");
+let experienceBtn = document.getElementById("experienceBtn");
+experienceBtn?.addEventListener("click", () => {
+  experience_section!.classList.toggle("hide");
+});
+
+let certification_section = document.getElementById("certifications-section");
+let certificationBtn = document.getElementById("certificationBtn");
+certificationBtn?.addEventListener("click", () => {
+  certification_section!.classList.toggle("hide");
+});
+
+let education_section = document.getElementById("education-section");
+let educationBtn = document.getElementById("educationBtn");
+educationBtn?.addEventListener("click", () => {
+  education_section!.classList.toggle("hide");
+});
+
+let printBtn = document.getElementById("print-btn") as HTMLInputElement;
+printBtn.addEventListener("click", () => {
+  window.print();
+});
+
+let editBtn = document.getElementById("edit-btn") as HTMLInputElement;
+editBtn.addEventListener("click", () => {
+  window.history.back();
 });
